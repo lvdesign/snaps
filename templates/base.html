@@ -27,7 +27,9 @@ Source+Sans+Pro:400" rel="stylesheet">
         id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
         {{ user.username }}
         </a>
-        <p><a href="{% url 'logout' %}">Log out</a></p>
+        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+            <li><a href="{% url 'logout' %}">Log out</a></li>
+        </ul>
     </div>
     {% else %}
     </ul>
